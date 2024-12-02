@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Joy of Painting</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Joy of Painting</a>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Explore Bob Ross Episodes</h1>
+
+        <div class="card p-4">
+            <h4 class="mb-3">Filters</h4>
+            <form id="filters-form" class="row g-3">
+                <div class="col-md-4">
+                    <label for="color-filter" class="form-label">Color</label>
+                    <input type="text" id="color-filter" class="form-control" placeholder="ex. Sap Green">
+                </div>
+                <div class="col-md-4">
+                    <label for="subject-filter" class="form-label">Subject</label>
+                    <input type="text" id="subject-filter" class="form-control" placeholder="ex. Mountain">
+                </div>
+                <div class="col-md-4">
+                    <label for="season-filter" class="form-label">Season</label>
+                    <input type="number" id="season-filter" class="form-control" placeholder="ex. 1">
+                </div>
+                <div class="col-12 text-end">
+                    <button type="button" id="apply-filters" class="btn btn-primary">Apply Filters</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="table-responsive mt-5">
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Title</th>
+                        <th>Season</th>
+                        <th>Episode</th>
+                        <th>Broadcast Date</th>
+                    </tr>
+                </thead>
+                <tbody id="episodes-table-body">
+                    <!-- Populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
